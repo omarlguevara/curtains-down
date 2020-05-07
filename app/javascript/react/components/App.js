@@ -1,7 +1,21 @@
 import React from 'react'
+import { BrowserRouter, Switch, Route } from "react-router-dom"
 
-export const App = (props) => {
-  return (<h1>Make It So React</h1>)
+import TheatersIndexContainer from "../containers/TheatersIndexContainer"
+import TheatersShowContainer from "../containers/TheatersShowContainer"
+import UserShowContainer from "../containers/UserShowContainer"
+
+const App = (props) => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/theaters" component={TheatersIndexContainer} />
+        <Route exact path="/theaters/:id" component={TheatersShowContainer} />
+        <Route exact path="/users/:id" component={UserShowContainer} />
+        <Route exact path="/" component={TheatersIndexContainer} />
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
 export default App
