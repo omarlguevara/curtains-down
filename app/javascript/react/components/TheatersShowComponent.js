@@ -1,8 +1,8 @@
 import React from 'react'
 
 const TheatersShowComponent = ({theater}) => {
-  const { title, image, description, creator, platform, genre,
-    site, release_date } = game
+  const { title, image, description, genre,
+    site, } = theater
 
    return (
      <>

@@ -7,11 +7,8 @@ const NewTheaterFormComponent = props => {
      title: "",
      image: "",
      description: "",
-     creator: "",
-     platform: "",
      genre: "",
      site: "",
-     release_date: ""
    }
 
    const [errors, setErrors] = useState({})
@@ -58,7 +55,7 @@ const NewTheaterFormComponent = props => {
        <div className="formtitle"><h4>Add a new Theater to our review library!</h4></div>
        <div className="formdiv grid-x grid-margin-x">
          <form className="callout cell small-12 medium-10 large-10" id="form-id" onSubmit={onSubmitHandler}>
-           <ErrorList errors={errors} />
+          <ErrorList errors={errors} />
 
            <label htmlFor="title">Title</label>
            <input type="text" name="title" id="title" onChange={handleChange} value={newTheaterFormData.title} />
@@ -69,9 +66,11 @@ const NewTheaterFormComponent = props => {
            <label htmlFor="description">Description</label>
            <textarea className="vertical" name="description" id="description" onChange={handleChange} value={newTheaterFormData.description} />
              <div className="cell small-6">
+
                <label htmlFor="genre">Genre</label>
                <input type="text" name="genre" id="genre" onChange={handleChange} value={newTheaterFormData.genre} />
              </div>
+
              <label htmlFor="site">Website URL</label>
            <input type="text" name="site" id="site" onChange={handleChange} value={newTheaterFormData.site} />
 

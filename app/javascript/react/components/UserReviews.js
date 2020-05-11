@@ -6,7 +6,7 @@ const UserReviews = props => {
     if (props.reviews.length > 0) {
       allReviews = props.reviews.map((review) => {
         return(
-          <ReviewIndexTile
+          <ReviewTile
             key={review.id}
             id={review.id}
             rating={review.rating}

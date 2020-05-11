@@ -1,5 +1,4 @@
 class Api::V1::TheatersController < ApplicationController
-
   before_action :authorize_user, except: [:index, :show, :create]
 
   def index
@@ -31,7 +30,7 @@ class Api::V1::TheatersController < ApplicationController
   protected
 
   def theater_params
-    params.require(:theater).permit(:title, :image, :number_of_players, :description, :creator, :platform, :genre, :site, :release_date)
+    params.require(:theater).permit(:title, :image, :description, :genre, :site)
   end
 
   def authorize_user

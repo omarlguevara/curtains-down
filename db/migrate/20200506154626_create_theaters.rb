@@ -4,8 +4,9 @@ class CreateTheaters < ActiveRecord::Migration[5.2]
        t.string :title, null: false
        t.string :image
        t.string :description
-
-       t.timestamps null: false
+       t.string :genre
+       t.string :site
+       t.timestamps
      end
    end
-end 
+end

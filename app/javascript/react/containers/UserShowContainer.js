@@ -66,7 +66,7 @@ const UserShowContainer = (props) => {
   return (
     <>
       <UserProfileComponent user={user} />
-      <UserReviewsComponent reviews={reviews} fetchDeleteReview={fetchDeleteReview} />
+      <UserReviews reviews={reviews} fetchDeleteReview={fetchDeleteReview} />
     </>
   )
 }

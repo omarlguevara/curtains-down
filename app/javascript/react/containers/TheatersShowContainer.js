@@ -103,7 +103,7 @@ const TheatersShowContainer = props => {
       const allowDeletion = reviewByCurrentUser || adminLoggedIn
 
       return(
-        <ReviewIndexTile
+        <ReviewTile
           key={review.id}
           id={review.id}
           reviewUserName={review.user_name}

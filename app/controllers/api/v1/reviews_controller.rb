@@ -1,8 +1,8 @@
 class Api::V1::ReviewsController < ApplicationController
-
   before_action :authorize_user, except: [:index, :show, :create]
 
   def index
+      render json: Review.all
   end
 
   def create
