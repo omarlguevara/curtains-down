@@ -1,13 +1,10 @@
-require 'Pry'
-require 'Nokogiri'
+require 'nokogiri'
 require 'open-uri'
 require 'json'
 require 'csv'
-# require_relative "app/models/theater"
+
 
 class TheaterScraper
-
-  puts ("hello")
 
   attr_reader :theater, :url
   BASE_URL = "https://www.playbill.com/broadway-theatres"
