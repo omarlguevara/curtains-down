@@ -24,7 +24,7 @@ class TheaterScraper
       theater = Theater.new
       theater.title = theater_node.css('.bsp-list-promo-title').text
       theater.image = theater_node.css('img').attr('data-lazy').value
-      theater_node.css('.bsp-list-promo-desc').search('br').each do |br| br.replace('\n')end
+      theater_node.css('.bsp-list-promo-desc').search('br').each do |br| br.replace('')end
         theater.description = theater_node.css('.bsp-list-promo-desc').text
           theater.site = BASE_URL
         theater.save

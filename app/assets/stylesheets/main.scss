@@ -1,7 +1,38 @@
 
+.showImage {
+  background: url("omars_background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  border: solid;
+  border-color: black;
+  border-radius: 15px;
+
+  img {
+    display: block;
+    border-radius: 25px;
+    width: 600px;
+    height: 645px;
+    overflow:hidden;
+    margin: auto;
+    border: 20px;
+    padding: 60px;
+    padding-bottom: 200px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image:
+  linear-gradient(
+  );
+}
+
+
 
 #app {
-  background-color: #FEFAE0;
+   background-image: url("green_theater.png");
   display:flex;
   align-items: center;
   justify-content: center;
@@ -12,13 +43,6 @@
   padding: 25px;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-image:
-  linear-gradient(
-  );
-}
 
 h4 {
   text-align: center;
@@ -39,7 +63,7 @@ nav {
 
   h4 {
     font-size: 100px;
-    color: #800a0a;
+    color:  #1779ba;
     font-family: Stencil Std;
     text-shadow: 3px 3px #000000;
   }
@@ -98,14 +122,6 @@ nav {
   .right {
     background-color: #606C38;
   }
-}
-
-.theater-index-margin {
-  margin-top: 25px;
-  border: solid;
-  border-color: black;
-  border-radius: 15px;
-  background-color: #766A65#EDD812;
 }
 
 .sign {
@@ -200,7 +216,6 @@ a:hover {
 label {
   font-family: Stencil Std;
   font-size: 20px;
-  text-shadow: 1px 1px #000000;
   font-weight: 400;
   color: #766A65#EDD812;
 }
@@ -257,7 +272,7 @@ em {
   margin-top: 0px;
   h3 {
     font-family: Stencil Std;
-    color: #800a0a;
+    color: #1779ba;
     text-shadow: 2px 2px black;
     font-size: 50px;
     text-align: center;
@@ -265,27 +280,6 @@ em {
   }
 }
 
-.showImage {
-    background: url("theater.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    position: relative;
-    border: solid;
-    border-color: black;
-    border-radius: 15px;
-
-  img {
-    display: block;
-    border-radius: 25px;
-    width: 600px;
-    height: 645px;
-    overflow:hidden;
-    margin: auto;
-    border: 20px;
-    padding: 60px;
-    padding-bottom: 200px;
-  }
-}
 
 .showText  {
   color: black;
