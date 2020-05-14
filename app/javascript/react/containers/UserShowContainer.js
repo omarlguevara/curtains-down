@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import UserProfileComponent from "./../components/UserProfileComponent"
 import UserReviews from "./../components/UserReviews"
+import GoogleMap from "./../components/GoogleMap"
 
 const UserShowContainer = (props) => {
 
@@ -65,8 +66,19 @@ const UserShowContainer = (props) => {
 
   return (
     <>
+    <div className="grid-container">
+      <div className="grid-x">
+      <div className="cell small-6">
       <UserProfileComponent user={user} />
+      </div>
+      <div className="cell small-6">
       <UserReviews reviews={reviews} fetchDeleteReview={fetchDeleteReview} />
+      </div>
+      </div>
+      <div className="map-container">
+      <GoogleMap/>
+      </div>
+      </div>
     </>
   )
 }

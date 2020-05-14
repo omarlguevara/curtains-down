@@ -12,7 +12,8 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+#api keys
+.env
 
 /node_modules
 /yarn-error.log
