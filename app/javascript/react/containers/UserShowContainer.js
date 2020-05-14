@@ -2,6 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react'
 import UserProfileComponent from "./../components/UserProfileComponent"
 import UserReviews from "./../components/UserReviews"
 import GoogleMap from "./../components/GoogleMap"
+import SearchBox from "./../components/SearchBox"
 
 const UserShowContainer = (props) => {
 
@@ -76,7 +77,9 @@ const UserShowContainer = (props) => {
       </div>
       </div>
       <div className="map-container">
-      <GoogleMap/>
+      <GoogleMap>
+      <SearchBox/>
+      </GoogleMap>
       </div>
       </div>
     </>
