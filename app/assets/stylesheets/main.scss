@@ -7,7 +7,14 @@
   width: 100%;
 }
 
-
+.user-reviews {
+  h3 {
+    font-family: Stencil Std;
+    text-shadow: 2px 2px #000000;
+    font-weight: 600;
+    color: #D9D690;
+  }
+}
 
 body {
   #new_user {
@@ -59,7 +66,7 @@ h4 {
   text-align: center;
 }
 
-/*  NAVIGATION */
+//Navigation
 nav {
   h1 {
     font-family: Stencil Std;
@@ -100,7 +107,7 @@ nav {
   border-radius: 15px;
   background-color: #D9D690;
   border: solid;
-  border-color: black;
+  border-color: #D9D690;
 
   img {
     margin-top: 1rem;
@@ -125,7 +132,7 @@ nav {
     font-family: Stencil Std;
   }
 }
-//----------------- make blue
+
 .theater-padded-border {
   border: solid;
 }
@@ -144,9 +151,9 @@ nav {
   background-color: #FEFAE0;
   width: 1200px;
 }
-#theater-index-background {
-  background-color: #766A65#EDD812;
-}
+// #theater-index-background {
+//   background-color: #766A65#EDD812;
+// }
 
 .right {
   li {
@@ -164,7 +171,6 @@ li {
 
 a:hover {
   font-weight: 600;
-  // color: #766A65#EDD812;
 }
 
 .button {
@@ -274,19 +280,19 @@ em {
   border: solid;
   border-color: black;
 }
-// ---------------------------------------------------------
+
 .showTitle {
   background-color: #766A65#EDD812;
   border-radius: 15px;
   align-content: center;
   height: 100px;
   margin-top: 0px;
+
   h3 {
     font-family: Stencil Std;
     color: #1779ba;
     font-size: 50px;
     text-align: center;
-    //  ------------------- make blue
   }
 }
 
@@ -338,16 +344,14 @@ em {
     font-family: Stencil Std;
     text-shadow: 2px 2px #000000;
     font-weight: 600;
-    color: #1779ba;
-//-----------------------------make blue
+    color: #D9D690;
+
   }
   h3 {
     font-family: 'Times New Roman', Times, serif;
-    color: #1779ba;
+    color: #D9D690;
     text-shadow: 2px 2px #000000;
     font-weight: 800;
-
-
   }
 }
 
@@ -361,7 +365,7 @@ em {
   font-family: 'Times New Roman', Times, serif;
 
   color: #FFC0CB;
-// ---------------- make blue
+
   a {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -378,11 +382,10 @@ em {
   background: #1779ba;
   padding: 1rem 2rem;
   font-family: 'Times New Roman', Times, serif;
-//---------------- make blue is pink
   color: #D9D690;
   font-size: 20px;
 }
-//----------------- make blue also pink
+
 h4 {
   color: black;
   font-family: Stencil Std;
