@@ -67,7 +67,7 @@ const GoogleMap = (props) => {
     <AnyReactComponent
     lat={latitude}
     lng={longitude}
-    text=<h5 className="font green">Theaters</h5>
+    // text=<h5 className="font green">Theaters</h5>
     />
     {apiReady && (
            <SearchBox
