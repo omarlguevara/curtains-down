@@ -22,7 +22,7 @@ body {
   }
 }
 .showImage {
-  background: url("omars_background.jpg");
+  background-image: image-url("omars_background.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -50,7 +50,7 @@ body {
 }
 
 #app {
-   background-image: url("green_theater.png");
+   background-image: image-url("green_theater.png");
   display:flex;
   align-items: center;
   justify-content: center;
