@@ -78,7 +78,6 @@ const UserShowContainer = (props) => {
       </div>
       <div className="map-container">
       <GoogleMap>
-      <SearchBox/>
       </GoogleMap>
       </div>
       </div>
