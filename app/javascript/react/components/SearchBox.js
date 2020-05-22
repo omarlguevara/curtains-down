@@ -2,25 +2,43 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default class SearchBox extends React.Component {
-  // static propTypes = {
-  //   placeholder: React.PropTypes.string,
-  //   onPlacesChanged: React.PropTypes.func
-  // }
-  render() {
-    return <input ref="input" {...this.props} type="text"/>;
-  }
-  onPlacesChanged = () => {
-    if (this.props.onPlacesChanged) {
-      this.props.onPlacesChanged(this.searchBox.getPlaces());
+
+  onPlacesChanged = ({ map, addplace } = this.props) => {
+    const selected = this.searchBox.getPlaces();
+    const { 0: place } = selected;
+    if (!place.geometry) return;
+    if (place.geometry.viewport) {
+      map.fitBounds(place.geometry.viewport);
     }
-  }
-  componentDidMount() {
-    var input = ReactDOM.findDOMNode(this.refs.input);
-    this.searchBox = new this.props.googlemaps.places.SearchBox(input);
+    else {
+      map.setCenter(place.geometry.location);
+      map.setZoom(17);
+    }
+
+    addplace(selected);
+    this.searchInput.blur();
+  };
+
+
+  componentDidMount({ map, mapApi } = this.props) {
+    this.searchBox = new mapApi.places.SearchBox(this.searchInput);
     this.searchBox.addListener('places_changed', this.onPlacesChanged);
+    this.searchBox.bindTo('bounds', map);
   }
-  componentWillUnmount() {
-    // https://developers.google.com/maps/documentation/javascript/events#removing
-    this.props.googlemaps.event.clearInstanceListeners(this.searchBox);
+
+  componentWillUnmount({ mapApi } = this.props) {
+    mapApi.event.clearInstanceListeners(this.searchInput);
+  }
+
+  render() {
+    return (
+
+      <input ref={(ref) => { this.searchInput = ref; }}
+      type="text"
+      onFocus={this.clearSearchBox}
+      placeholder="Enter a location"
+      />
+
+    );
   }
 }
